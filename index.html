@@ -153,8 +153,8 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fas fa-paper-plane"></i> tanmoytssaha@gmail.com</p>
-                    <p><i class="fas fa-phone-square-alt"></i> 9383267850</p>
+                    <p><i class="fas fa-paper-plane"></i> example@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> 1234567890</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter-square"></i></a>
@@ -174,7 +174,7 @@
             </div>
         </div>
         <div class="copyright">
-            <p>copyright @ Tanmoy. Made with <i class="fas fa-heart"></i> by Easy Tutorial</p>
+            <p>copyright @ Dev Alphaspace. Made with <i class="fas fa-heart"></i> by Dev Alphaspace</p>
         </div>
     </div>
 
@@ -194,6 +194,15 @@
             event.currentTarget.classList.add('active-link');
             document.getElementById(tabName).classList.add('active-tab');
         }
+
+        // JavaScript for handling the mobile navigation menu
+        document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        document.querySelector('.fas.fa-times').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.remove('show');
+        });
 
     </script>
 </body>

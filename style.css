@@ -131,7 +131,7 @@ nav ul li a:hover::after {
 }
 
 /* .tab-links:hover::after{
-    width: 100%;
+width: 100%;
 } */
 .tab-links.active-link::after {
     width: 50%;
@@ -323,22 +323,27 @@ nav ul li a:hover::after {
     transform: translateY(-5px);
 }
 
-.btn.btn2{
+.btn.btn2 {
     display: inline-block
 }
-.btn.btn3{
+
+.btn.btn3 {
     background: #080808;
     margin-top: 30px;
     transition: background 0.5;
 
 }
-.btn.btn3:hover{
+
+.btn.btn3:hover {
     background: #ff004f;
 }
-.contact-right form{
+
+.contact-right form {
     width: 100%;
 }
-form input, form textarea {
+
+form input,
+form textarea {
     width: 100%;
     border: 0;
     outline: none;
@@ -349,7 +354,8 @@ form input, form textarea {
     font-size: 18px;
     border-radius: 6px;
 }
-.copyright{
+
+.copyright {
     width: 100%;
     text-align: center;
     padding: 25px 0;
@@ -357,34 +363,41 @@ form input, form textarea {
     font-weight: 300;
     margin-top: 20px;
 }
-.copyright i{
+
+.copyright i {
     color: #ff004f;
     transition: color 0.5s;
 }
-.copyright i:hover{
+
+.copyright i:hover {
     color: #fff;
 }
-nav .fas{
+
+nav .fas {
     display: none;
 }
 
 /* ----------CSS FOR SMALL SCREEN---------- */
 @media only screen and (max-width: 600px) {
-    #header{
+    #header {
         background-image: url(images/phone-background.png);
     }
-    .header-text{
+
+    .header-text {
         margin-top: 100%;
         font-size: 16px;
     }
-    .header-text h1{
+
+    .header-text h1 {
         font-size: 30px;
     }
-    nav .fas{
+
+    nav .fas {
         display: block;
         font-size: 25px;
     }
-    nav ul{
+
+    nav ul {
         background: #b54768;
         position: fixed;
         top: 0;
@@ -393,9 +406,62 @@ nav .fas{
         height: 100vh;
         padding-top: 50px;
     }
-    nav ul li{
+
+    nav ul li {
         display: block;
         margin: 25px;
     }
 
+}
+
+/* ----------CSS FOR SMALL SCREEN---------- */
+@media only screen and (max-width: 600px) {
+
+    /* Adjust the header image and text size for small screens */
+    #header {
+        background-image: url(images/phone-background.png);
+    }
+
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    /* Show the navigation menu on small screens */
+    nav ul {
+        display: none;
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #b54768;
+        position: fixed;
+        top: 0;
+        width: 200px;
+        /* Increased the width to accommodate the menu items */
+        right: 0;
+        height: 100vh;
+        padding-top: 50px;
+        transform: translateX(200px);
+        /* Off-canvas menu, initially hidden */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul.show {
+        transform: translateX(0);
+        /* Show the menu when 'show' class is applied */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
 }
